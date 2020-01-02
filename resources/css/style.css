@@ -925,6 +925,8 @@ transition: 1s;
   #footer {
   	margin-bottom: 50px;
   }
+
+}
 	
 
 /*For tablets and mostly phones, LANDSCAPE MODE*/
@@ -954,7 +956,35 @@ transition: 1s;
 }
 
  
+/* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container-timeline {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container-timeline::before {
+  left: 60px;
+  border: medium solid rgb(218,48,49);
+  border-width: 10px 10px 10px 0;
+  border-color: transparent rgb(218,48,49) transparent transparent;
+  }
 
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 0px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
 
 	
 }
